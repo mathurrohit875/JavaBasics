@@ -1,3 +1,5 @@
+package StringPrograms;
+
 public class SwapStringCharacter {
 
   public static void main(String[] args) {

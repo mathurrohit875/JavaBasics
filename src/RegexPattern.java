@@ -3,7 +3,7 @@ import java.util.regex.Pattern;
 
 public class RegexPattern {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     dot("Hepklo Heoalo");
     caret("Pello Horld");
     caret("Horld Hello");
@@ -11,6 +11,15 @@ public class RegexPattern {
     wordBoundary("hello the world is e the good");
     wordCharacter("Your request with Wallet Advance no: ROIE05667 has been processed successfully.");
     Digit("abc123 bcd4596");
+
+
+    Whitespacecharacter("Your request with Wallet Advance no: ROIE05667 has been processed successfully.");
+    nonWhiteSpaceCharacter("Your request with Wallet Advance no: ROIE05667 has been processed successfully.");
+
+    String str="Your request with Wallet Advance no: (\\S+) has been processed successfully.";
+    String st="Your request with Wallet Advance no: ROIE05667 has been processed successfully.";
+    getLoanNumber(str,st);
+
 
   }
 
@@ -124,6 +133,33 @@ public class RegexPattern {
   }
 
   public static void Whitespacecharacter(String st) {
+    Pattern pattern = Pattern.compile("\\s");
+    Matcher matcher = pattern.matcher(st);
+
+    System.out.println("Whitespace characters found at indices:");
+    while (matcher.find()) {
+      System.out.println("Index: " + matcher.start() + " -> '" + matcher.group() + "'");
+    }
+  }
+
+  public static void nonWhiteSpaceCharacter(String st) {
+    Pattern pattern = Pattern.compile("\\S");
+    Matcher matcher = pattern.matcher(st);
+    System.out.println("Non-whitespace characters found:");
+
+    while (matcher.find()) {
+      System.out.println("Index: " + matcher.start() + " -> '" + matcher.group() + "'");
+    }
+  }
+
+  public static void getLoanNumber(String str, String st){
+    Pattern pattern = Pattern.compile(str);
+    Matcher matcher = pattern.matcher(st);
+    System.out.println("Non-whitespace characters found:");
+
+    while (matcher.find()) {
+      System.out.println("matcher.group(1) + "+matcher.group(1));
+    }
 
   }
 }

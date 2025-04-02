@@ -1,3 +1,5 @@
+package StringPrograms;
+
 public class Palindrome {
 //palindrome string means which looks same when written from front to back or back to front
   // example: madam.. madam when written from any where will look same.

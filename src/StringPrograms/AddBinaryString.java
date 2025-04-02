@@ -1,3 +1,5 @@
+package StringPrograms;
+
 public class AddBinaryString {
 
   public static void main(String[] args){
