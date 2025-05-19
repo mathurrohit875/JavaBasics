@@ -21,10 +21,7 @@ public class RepeatedWordInString {
           System.out.println("count: " + count);
           break;
         }
-
-
       }
-
     }
 
   }

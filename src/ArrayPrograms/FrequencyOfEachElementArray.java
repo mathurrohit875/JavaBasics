@@ -33,9 +33,6 @@ public class FrequencyOfEachElementArray {
         }
       }
       System.out.println("frequency: "+arr[i]+" count: "+count);
-
     }
-
-
   }
 }

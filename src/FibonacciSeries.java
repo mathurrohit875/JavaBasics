@@ -13,9 +13,6 @@ public class FibonacciSeries {
       System.out.println("sum: "+sum);
       first=second;
       second=sum;
-
-
     }
-
   }
 }
