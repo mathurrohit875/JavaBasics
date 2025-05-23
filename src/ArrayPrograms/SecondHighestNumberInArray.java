@@ -5,7 +5,7 @@ public class SecondHighestNumberInArray {
   public static void main(String[] args) {
 
     int[] arr = {2, 3, 4, 51, 8, 52, 35};
-    int[] newArr = new int[arr.length];
+    //int[] newArr = new int[arr.length];
     int max;
     for (int i = 0; i < arr.length; i++) {
 
@@ -16,7 +16,7 @@ public class SecondHighestNumberInArray {
           arr[j] = max;
         }
       }
-      System.out.println(arr[i]);
+      //System.out.println(arr[]);
     }
     System.out.println(arr[1]);
 

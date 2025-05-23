@@ -127,6 +127,32 @@ public class MyKnowledge {
     for(int keyy: du.keySet()){
       System.out.println("num: "+keyy+" freq: "+du.get(keyy));
     }
+
+    //second highest number in array
+    int[] arrhi = {1, 2, 3, 4};
+    int max;
+    for (int i = 0; i < arrhi.length; i++) {
+      for (int j = (i + 1); j < arrhi.length; j++) {
+        if (arrhi[i] < arrhi[j]) {
+          max = arrhi[i];
+          arrhi[i] = arrhi[j];
+          arrhi[j] = max;
+        }
+      }
+    }
+    System.out.println("second  highest: " + arrhi[1]);
+    int[] a1 = {10, 20, 30, 50, 60, 70};
+    int key = 90;
+    System.out.println(key + " is found at index:  " + linearSearch(a1, key));
+  }
+
+  public static int linearSearch(int[] abc, int key) {
+    for (int i = 0; i < abc.length; i++) {
+      if (abc[i] == key) {
+        return i;
+      }
+    }
+    return -1;
 }
 }
 
