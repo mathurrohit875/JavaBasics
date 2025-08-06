@@ -7,8 +7,8 @@ public class ReverseArray {
     int[] newArr = new int[arr.length];
     for (int i = 0; i <arr.length; i++) {
       newArr[i]=arr[arr.length-1-i];
-      System.out.print(newArr[i]);
-      System.out.print(",");
+      System.out.println(newArr[i]);
+      //System.out.print(",");
       //newArr[i] = arr[i];
       //System.out.println("new arr: " + newArr[i]);
     }
