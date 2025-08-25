@@ -1,6 +1,6 @@
 package StudentClassPackage;
 
-public class Students {
+public class Students implements Comparable<Students> {
   private final String name;
   private final double gpa;
 
@@ -8,6 +8,14 @@ public class Students {
     this.name = name;
     this.gpa = gpa;
 
+  }
+
+  @Override
+  public String toString() {
+    return "Students{" +
+          "name='" + name + '\'' +
+          ", gpa=" + gpa +
+          '}';
   }
 
   public String getName() {
@@ -19,4 +27,8 @@ public class Students {
   }
 
 
+  @Override
+  public int compareTo(Students o) {
+    return Double.compare(this.gpa, o.getGpa());
+  }
 }
