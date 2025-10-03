@@ -1,6 +1,8 @@
 package JavaEightLearning;
 
+@FunctionalInterface
 interface A {
+
   static void color() {
     System.out.println("A color");
   }
@@ -10,7 +12,9 @@ interface A {
   }
 
   void run();
+
 }
+
 
 interface B extends A {
 
@@ -50,6 +54,7 @@ public class FunctionalInterfaceClass implements A, B, C {
 
 
   }
+
 
   @Override
   public void sayHello() {
