@@ -45,7 +45,7 @@ public class PracticeCoreJava {
       dup += list.get(i);
     }
     System.out.println(dup);
-    List<String> list2 = new ArrayList<>();
+    ArrayList<String> list2 = new ArrayList<>();
     list2.add("he");
     list2.add("hu");
     list2.add("he");
@@ -72,6 +72,17 @@ public class PracticeCoreJava {
           .map(word -> new StringBuilder(word).reverse().toString())
           .collect(Collectors.joining(" "));
     System.out.println(result);
+
+
+    String stre = "hello world";
+    String[] r = stre.split(" ");
+    String rev = "";
+    for (int i = 0; i < stre.length(); i++) {
+      char c1 = stre.charAt(i);
+      rev = c1 + rev;
+
+    }
+    System.out.println(rev);
 
   }
 
