@@ -26,6 +26,7 @@ public class PracticeCoreJava {
     }
 
     HashMap<Character, Integer> map = new HashMap<>();
+
     for (int i = 0; i < str.length(); i++) {
       map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0) + 1);
     }
@@ -33,6 +34,10 @@ public class PracticeCoreJava {
       System.out.println(mm.getKey() + ": " + mm.getValue());
     }
     char[] c = {'a', 'b', 'c', 'a', 'b', 'c'};
+    while (map.containsKey('c')) {
+      System.out.println("hello");
+
+    }
     List<Character> list = new ArrayList<>();
     for (int i = 0; i < str.length(); i++) {
       if (!list.contains(str.charAt(i))) {

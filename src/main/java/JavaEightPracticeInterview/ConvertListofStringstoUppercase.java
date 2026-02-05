@@ -1,6 +1,7 @@
 package JavaEightPracticeInterview;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,7 +19,16 @@ public class ConvertListofStringstoUppercase {
 
   public static void main(String[] args) {
     List<String> words = Arrays.asList("apple", "banana", "cherry");
-    List<String> stringList = words.stream().map(String::toUpperCase).collect(Collectors.toList());
-    System.out.println(stringList);
+    //using stream
+    List<String> collect = words.stream().map(n -> n.toUpperCase()).collect(Collectors.toList());
+    System.out.println(collect);
+
+    //using for loop
+    List<String> cc = new ArrayList<>();
+    for (String s : words) {
+      cc.add(s.toUpperCase());
+    }
+    System.out.println(cc);
+
   }
 }

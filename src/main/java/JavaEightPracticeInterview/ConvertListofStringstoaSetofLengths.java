@@ -1,6 +1,7 @@
 package JavaEightPracticeInterview;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -18,7 +19,14 @@ public class ConvertListofStringstoaSetofLengths {
 
   public static void main(String[] args) {
     List<String> names = Arrays.asList("Tom", "Jerry", "Anna", "Bob");
-    Set<Integer> collect = names.stream().map(n -> n.length()).collect(Collectors.toSet());
+    //using stream
+    Set<Integer> collect = names.stream().map(String::length).collect(Collectors.toSet());
     System.out.println(collect);
+    //using for loop
+    Set<Integer> set = new HashSet<>();
+    for (String s : names) {
+      set.add(s.length());
+    }
+    System.out.println(set);
   }
 }

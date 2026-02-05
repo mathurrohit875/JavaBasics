@@ -20,6 +20,6 @@ public class SortElementAscendingArray {
       System.out.println("aa: " + arr[i]);
 
     }
-    System.out.println();
+
   }
 }

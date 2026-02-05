@@ -9,7 +9,7 @@ public class AreAnagrams {
 
   public static void main(String[] args) {
     String str1 = "listen";
-    String str2 = "silent";
+    String str2 = "enlist";
     HashMap<Character, Integer> map1 = new HashMap<>();
     HashMap<Character, Integer> map2 = new HashMap<>();
     for (int i = 0; i < str1.length(); i++) {

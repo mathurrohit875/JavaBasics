@@ -17,7 +17,6 @@ public class FirstNonRepeatingCharacter {
       if (map.get(c) == 1) {
         System.out.println(c + " " + map.get(c));
         break;
-
       }
 
     }

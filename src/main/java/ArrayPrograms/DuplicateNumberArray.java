@@ -1,5 +1,9 @@
 package ArrayPrograms;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class DuplicateNumberArray {
 
   public static void main(String[] args) {
@@ -33,6 +37,13 @@ public class DuplicateNumberArray {
         System.out.println("Number: " + arr[i] + " Count: " + count);
       }
     }
+    int[] arr1 = {1, 2, 3, 1, 2};
+    List<Integer> ar = new ArrayList<>();
+    for (int i : arr1) {
+      ar.add(i);
+    }
+    List<Integer> collect = ar.stream().distinct().collect(Collectors.toList());
+    System.out.println(collect);
   }
 }
 
